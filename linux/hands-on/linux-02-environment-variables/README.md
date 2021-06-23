@@ -116,7 +116,6 @@ test.sh
 - Using the environment variable in the script.
 ​
 ```bash
-cd test
 export CLARUS=env.var
 WAY=shell.var
 cd test
