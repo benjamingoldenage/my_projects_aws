@@ -1,0 +1,7 @@
+instructor:
+  name: galip
+  department: aws
+  job: cloud engineer
+students:
+  - name: hamit
+    age: 33
