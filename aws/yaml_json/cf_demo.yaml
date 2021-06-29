@@ -10,8 +10,7 @@ Resources:
       KeyName: ec2_key
       SecurityGroups:
         - cf_demo
-      Tags:
-        - Key: Name
+      Tags:        - Key: Name
           Value: charlie-cf-stack-instance
         - Key: Department
           Value: hr
