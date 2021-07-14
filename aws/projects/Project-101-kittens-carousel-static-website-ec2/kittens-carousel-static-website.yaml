@@ -19,9 +19,9 @@ Resources:
   WebServerHost:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0ab4d1e9cf9a1215a
+      ImageId: ami-0dc2d3e4c0f9ebd18
       InstanceType: t2.micro
-      KeyName: serdar
+      KeyName: ec2_key
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
       Tags:
