@@ -122,7 +122,15 @@ do
    echo $file
 done
 ```
-
+#!/bin/bash
+echo "Files in current folder:"
+for file in `pwd`/*
+do
+        echo $file
+done
+````
+`````
+````
 - Make the script executable and execute it.
 
 ```bash

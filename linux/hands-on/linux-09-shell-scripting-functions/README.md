@@ -106,6 +106,30 @@ echo $?
 ./functions.sh
 ```
 
+
+#!/bin/bash
+test () {
+if [[ -e clarusway.txt  ]]
+then
+        return 3
+fi
+return 4
+return 7
+return 8
+}
+test
+if [[ $? -eq 3  ]]
+then
+        echo “clarusway.txt var”
+fi
+echo $?
+test
+if [[ $? -eq 4  ]]
+then
+        echo “yok”
+fi
+``````
+
 ## Part 4 - Nested Functions
 
 - One of the useful features of functions is that they can call themselves and other functions. 
@@ -133,7 +157,7 @@ function_one
 chmod +x nested-functions.sh
 ./nested-functions.sh
 ```
-
+`````
 ## Part 5 - Variables Scope
 
 - Global variables are variables that can be accessed from anywhere in the script regardless of the scope. In Bash, by default all variables are defined as global, even if declared inside the function.
