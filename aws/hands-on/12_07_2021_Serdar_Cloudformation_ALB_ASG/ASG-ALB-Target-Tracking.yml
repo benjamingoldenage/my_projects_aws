@@ -97,7 +97,7 @@ Resources:
   myLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
-      ImageId: ami-0dc2d3e4c0f9ebd18 # Required
+      ImageId: ami-0233c2d874b811deb # Required
       InstanceType: !Ref InstanceType  # Required
       KeyName: !Ref KeyName
       SecurityGroups:

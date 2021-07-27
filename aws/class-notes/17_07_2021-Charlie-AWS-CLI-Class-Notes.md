@@ -35,6 +35,7 @@ Lesson starts at 1500
     $ unzip awscliv2.zip
     $ sudo ./aws/install
 
+
     $ aws s3 ls
 
     So you have to configure according to your credentials.

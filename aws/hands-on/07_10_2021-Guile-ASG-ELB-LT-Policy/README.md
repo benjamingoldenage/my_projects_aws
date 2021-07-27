@@ -550,7 +550,7 @@ An Then wait   : 200
 
 - Name :
 ```text
-Step Policy Name : First Step Policy-Add
+Step Policy Name : First Step Policy-Remove
 ```
 
 - Select `Step Scaling` as Policy Type
