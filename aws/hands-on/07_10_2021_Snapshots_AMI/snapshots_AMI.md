@@ -44,6 +44,7 @@ Part 1 - Creating an Image from the Snapshot of the Nginx Server and Launching a
 
   ```text
 #!/bin/bash
+
 yum update -y
 amazon-linux-extras install nginx1.12
 yum install wget -y
