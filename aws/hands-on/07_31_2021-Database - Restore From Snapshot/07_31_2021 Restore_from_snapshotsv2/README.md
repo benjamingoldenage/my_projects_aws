@@ -151,8 +151,8 @@ Security Group
 ```bash
 sudo apt update -y
 ​
+sudo apt upgrade -y
 ```
-​
 - Install the `mariadb-client`.
 ​
 ```bash
@@ -173,7 +173,11 @@ mysql -h Your RDS Endpoint -u admin -p
 ```sql
 SHOW DATABASES;
 ```
-​
+USE mysql;
+
+```sql
+SELECT Host, User, authentication_string FROM user;​
+
 - Choose a database 
 ​
 ```sql
@@ -187,10 +191,7 @@ SHOW TABLES;
 ```
 ​
 - Show current users defined in the RDS DB instance.
-​
-```sql
-SELECT Host, User, authentication_string FROM user;
-```
+​```
 ​
 ### STEP 3 - Creating Tables in RDS DB Instance and Populating with Data
 ​
@@ -273,13 +274,14 @@ SHOW TABLES;
 - List all records within `employees` table.
 ​
 ```sql
-SELECT * FROM offices;
+SELECT * FROM employees;
+
 ```
 ​
 - List all records within `offices` table.
 ​
 ```sql
-SELECT * FROM employees;
+SELECT * FROM offices;
 ```
 ​
 - Close the `clarusway` database terminal.
@@ -453,6 +455,81 @@ there are only 4 records
 ​
   - Launch DB Instance.
 ​
-  ```text
+   ```text
   - Restore Time
- ...
+    Custom ----> Enter the exact time that you wrote down at the end of the PART-1
+  - DB Engine
+    MySQL Community Edition
+  - License model
+    general public-licence
+  - DB instance class
+    t2.micro
+  - Multi-AZ deployment
+    No
+  - Storage type
+    General Purpose SSD
+
+  Settings:
+  - DB instance identifier
+    restored-from-point-in-time-RDS
+  - Parameter group
+    default.mysql8.0
+
+  Network & Security:
+  Virtual Private Cloud (VPC)
+    Default
+  - Subnet group
+    default
+  - Public accessibility
+    *Yes
+  - Availability zone, Security groups, Database options, Backup, Log exports, Maintenance
+    Keep it as is
+  ```
+
+- Go to the MariaDB Client instance.
+
+- Log into the RDS instance (`restored-from-point-in-time-RDS`) as `admin` using the password defined `Pl123456789`
+
+```bash
+mysql -h [DNS Name of point in time recovery RDS Instance] -u admin -p clarusway
+```
+
+- Show that deleted records of employees are back in `restored-from-point-in-time-RDS`.
+
+```sql
+SELECT * FROM employees ORDER BY salary ASC;
+```
+
+## Part 5 - Dumping and Migrating Database
+
+- Show that some information are absent in the `clarusway` database on RDS DB instance (`RDS-Mysql`). We need to recover absent data from snapshot via dumping.
+
+- Go to MariaDB Client instance by connecting with SSH.
+
+- Back up the `clarusway` db from RDS DB instance (`restored-from-point-in-time-RDS`) to the file named `backup.sql` on EC2 instance.
+
+```bash
+mysqldump -h [restored-from-point-in-time-RDS endpoint] -u admin -p clarusway > backup.sql
+```
+
+- Show `backup.sql` file with `ls` command.
+
+- Restore the backup of `clarusway` db on to the MySQL DB Server (`RDS-mysql` instance) using  `backup.sql` file
+
+```bash
+mysql -h [RDS-mysql endpoint] -u admin -p clarusway < backup.sql
+```
+
+- Connect to the `RDS-mysql` instance.
+
+```bash
+mysql -h [RDS-mysql endpoint] -u admin -p;
+```
+
+- Show that all records are replicated in the `clarusway` database.
+
+```sql
+SHOW DATABASES;
+USE clarusway;
+SELECT * FROM employees;
+```

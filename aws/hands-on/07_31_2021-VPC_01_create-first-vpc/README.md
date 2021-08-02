@@ -1,8 +1,3 @@
-http://www.faqs.org/rfcs/rfc1918.html
-
-https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html
-
-
 # Hands-on VPC-01 : Configuring of VPC
 
 Purpose of the this hands-on training is to create VPC and configure VPC with components.
@@ -79,8 +74,11 @@ STEP 2: Create an internet gateway named 'clarus-igw'
 STEP 3 : Configuring Route Table
 
 - Go to the Route Tables from left hand menu
+
 - rename the route table of the vpc 'clarus-vpc-a' as 'clarus-default-rt'
+
 - select Routes on the sub-section
+
 - click edit routes
 
 - click add route
