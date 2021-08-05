@@ -1,0 +1,20 @@
+Cloud computing, often referred to as simply the “cloud", means storing and accessing data and programs over the Internet rather than the hard drive of your computer. The data can be anything such as files, images, documents, and more.
+
+Most cloud services are accessible through a web browser, such as Google Chrome or Firefox, and some companies offer custom mobile applications. Some well-known cloud services examples include Google Drive, Netflix, Apple iCloud, Dropbox, and Microsoft.
+
+####
+
+The idea of cloud computing came into the picture in 1950 with accessible via thin/static customers and mainframe computer implementation.
+In 1959, Computer scientist John McCarthy initiates the first project to use a time-sharing system, which allows several people to use a single, central, computer at the same time.
+In 1969, J. C. R. Licklider, both a psychologist and a computer scientist, helped develop the ARPANET (Advanced Research Projects Agency Network), a “very” primitive version of the Internet. His vision was for everyone to be interconnected and accessing programs and data at any site like today's cloud computing.
+In 1970, the concept of virtualization has evolved with the Internet.
+In 1997, Professor Ramnath Chellappa from Emory University had mentioned the cloud in an article.
+In 1999, one of the first landmarks in the history of cloud computing was Salesforce.com's introduction of the idea of providing business applications through a single website.
+Amazon Web Services (AWS), which launched its public cloud in 2002, recognized the start of the modern-day cloud. At this point, there were virtually no competitors and while the advantages of using the cloud, such as elasticity and scalability, were recognized, the practical use cases were not yet available to persuade potential users.
+In 2006, Amazon launched Amazon Web Service (AWS) on a utility computing basis although the initial release dated back to July 2002. The most well-known of these services are Amazon EC2 and Amazon S3.
+In 2008, NASA's OpenNebula, enhanced in the RESERVOIR European Commission-funded project, became the first open-source software for deploying private and hybrid clouds, and for the federation of clouds.
+In April 2008, Google announced a preview release of App Engine, a developer tool that allowed users to run their web applications on Google infrastructure.
+In October 2008, Microsoft launched Azure.
+In 2011, IBM introduced the IBM SmartCloud framework, in support of Smarter Planet (a cultural thinking project). Then, Apple launched the ICloud, which focuses on storing more personal information (photos, music, videos, etc.).
+In 2012, Oracle launched the Oracle Cloud offering three business basics: IaaS (as-a-service infrastructure), PaaS (as-a-service platform) and SAAS (as-a-service software).
+
