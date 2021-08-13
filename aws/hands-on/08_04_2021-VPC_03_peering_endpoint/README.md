@@ -196,7 +196,7 @@ click create button
 ```
 Go to EC2 service from AWS console
 
-Select "Private WEB EC2" ---> Actions ---> Instance Settings ---> Attach/Replace IAM Role select newly created IAM role named 'clarusS3FullAccessforEndpoint' ---> Apply
+Select "Private WEB EC2" ---> Actions ---> Security ---> Modify IAM Role  select newly created IAM role named 'clarusS3FullAccessforEndpoint' ---> Apply
 
 # STEP 2: Connect S3 Bucket from Private WEB Instance
 
