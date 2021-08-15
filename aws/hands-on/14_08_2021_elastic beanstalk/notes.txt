@@ -1,0 +1,8 @@
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html
+
+Link for deployment policies:
+
+https://blog.shikisoft.com/which_elastic_beanstalk_deployment_should_you_use/
+
+Sonlandırma için:
+aws elasticbeanstalk terminate-environment --environment-name Mysampleapp-env

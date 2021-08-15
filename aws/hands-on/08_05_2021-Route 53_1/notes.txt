@@ -1,0 +1,6 @@
+https://www.cloudflare.com/learning/dns/dns-records/#:~:text=DNS%20records%20(aka%20zone%20files,handle%20requests%20for%20that%20domain.
+
+
+https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html
+
+A hosted zone is a container for records, and records contain information about how you want to route traffic for a specific domain.
