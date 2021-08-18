@@ -1,0 +1,20 @@
+Amazon EFS, Amazon EC2 ile birlikte kullanılmak üzere tasarlanmış olan bir dosya depolama hizmetidir. Amazon EFS, bir dosya sistemi arabirimi ve dosya sistemi erişim semantiği (yüksek tutarlılık ve dosya kilitleme gibi) sunmasının yanı sıra bu depolama hizmetine binlerce Amazon EC2 bulut sunucusu tarafından aynı anda erişim sağlanabilir.
+Amazon EBS, Amazon EC2 ile birlikte kullanılmak üzere tasarlanmış olan bir blok düzeyinde depolama hizmetidir. Amazon EBS, tek bir EC2 bulut sunucusundan gelen ve veri erişimi için en düşük gecikme süresine ihtiyaç duyan iş yükleri için yüksek performans sunabilir.
+Amazon S3 bir nesne depolama hizmetidir. Amazon S3, verileri her yerden erişilebilen bir İnternet API’si aracılığıyla kullanıma sunar.
+
+
+https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-resolve-ssh-connection-errors/
+
+
+
+Host *
+  TCPKeepAlive yes
+  ServerAliveInterval 120
+
+  Often, a 'Connection timed out' error occurs because the security groups on either the Amazon EC2 instance or the mount target are not configured properly.
+I suggest the following steps:
+1. Go to the EC2 console, select 'Instances' and choose the instance you wish you mount with.
+2. Click the security group listed in the instance ‘Description’ pane and note the group ID.
+3. Click Network Interfaces in the left hand navigation column and identify the ENI with description "EFS mount target for fs-<YOUR_FS_ID>".
+4. This pane will also list a security group for the ENI. Click it and ensure that the group ID matches the one from Step 2.
+If you confirm that the mount target is in the same security group as the EC2 instance, ensure that the security group allows all ingress / egress traffic to itself (this is a default rule of security groups). If you find that the security groups are different, then you can either 1) move the EFS mount target to the correct security group, or 2) allow NFS traffic between the security groups (see http://docs.aws.amazon.com/efs/latest/ug/accessing-fs-create-security-groups.html for more details).

@@ -1,0 +1,1 @@
+https://neal-davis.medium.com/s3-vs-ebs-vs-efs-comparing-aws-storage-services-76080002cb49

@@ -1,0 +1,3 @@
+"Regional Edge Caches have larger cache-width than any individual edge location, so your objects remain in cache longer at these locations. This helps keep more of your content closer to your viewers, reducing the need for CloudFront to go back to your origin webserver, and improving overall performance for viewers."
+
+Regional Edge Caches are located between origin web servers and global edge locations and have a larger cache.

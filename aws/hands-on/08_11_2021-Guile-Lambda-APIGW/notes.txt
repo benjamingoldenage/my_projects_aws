@@ -1,0 +1,8 @@
+https://aws.amazon.com/lambda/pricing/
+
+
+Serverless vs. Docker — what to choose in 2019?
+https://medium.com/techmagic/serverless-vs-docker-what-to-choose-in-2019-80cb80f4b680#:~:text=Docker%20containers%20are%20vendor%2Dagnostic,the%20application%20anywhere%20you%20want.
+
+
+https://openexchangerates.org/

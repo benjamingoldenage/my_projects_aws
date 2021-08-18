@@ -1,0 +1,23 @@
+https://medium.com/@gokhansengun/cors-nedir-ve-ne-i%C5%9Fe-yarar-27006d85bf54
+
+
+
+CORS POLICY:
+
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "http://benjamin.radio.s3-website-us-east-1.amazonaws.com"
+        ],
+        "MaxAgeSeconds": 3000
+    }
+]
+
+
+The CORS configuration, written in JSON, defines a way for client web applications that are loaded in one domain to interact with resources in a different domain.
