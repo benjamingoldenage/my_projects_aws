@@ -395,7 +395,7 @@ tab seen bottom
 
 - ***Delete the Alias record 
 
-### STEP 2: Alias for ELB bucket 
+### STEP 2: Alias for ELB  
 
 - click your Domain name's public hosted zone
 
