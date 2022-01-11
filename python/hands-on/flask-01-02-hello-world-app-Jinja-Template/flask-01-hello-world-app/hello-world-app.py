@@ -4,11 +4,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def head():
-    return "I like Flask!"
+    return "Hello World!"
+
+@app.route('/new')
+def new():
+    return "enbüyükfener"
 
 @app.route('/second')
 def second():
-    return "This is the second page"
+    return "This is the second page. wowww!!"
 
 @app.route('/third/subthird')
 def third():
