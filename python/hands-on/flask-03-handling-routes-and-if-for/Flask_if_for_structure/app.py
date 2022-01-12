@@ -4,13 +4,13 @@ app = Flask (__name__)
 
 @app.route('/')
 def head():
-    first="This is my first condition experience"
-    return render_template("index.html",  message = False )
+    first="This is my first condition experience. I'm benjamin. nilü. canım kızım"
+    return render_template("index.html", message = False)
 
 
-@app.route('/serdar')
+@app.route('/ben')
 def header():
-    name = ["Serdar", "Fatih", "Ali", "Fatma", "Mostafa"]
+    name = ["Serdar", "Fatih", "Ali", "Fatma", "Mostafa", "Seref Ali", "Nilüfer", "Meryem"]
     return render_template("body.html", object = name)
 
 

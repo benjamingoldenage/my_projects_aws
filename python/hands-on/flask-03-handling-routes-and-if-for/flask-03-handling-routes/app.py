@@ -14,7 +14,7 @@ def home():
 # and assign to the static route of ('about')
 @app.route('/about')
 def about():
-    return '<h2>This is my about page </h2>'
+    return '<h1>This is my about page </h1>'
 
 # Create a function named error which returns a formatted string '<h1>Either you encountered an error or you are not authorized.</h1>' 
 # and assign to the static route of ('error')
@@ -38,7 +38,7 @@ def admin():
 # Create a function named greet which returns formatted inline html string 
 # and assign to the dynamic route of ('/<name>')
 # @app.route('/<name>')
-# def greet(name):
+# def greet1(name):
 #     greet_format=f"""
 # <!DOCTYPE html>
 # <html>
@@ -57,7 +57,7 @@ def admin():
 # and assign to the route of ('/greet_admin')
 @app.route('/greet_admin')
 def greet_admin():
-    return redirect(url_for(('greet'), name='Master Admin!!!!'))
+    return redirect(url_for(('greet'), name='Great Adminnn!!! Tosunnn'))
 
 
 
@@ -82,7 +82,7 @@ def evens():
     return render_template('evens.html')
 
 
-# run this app in debug mode on your local. Do not forget to change debug mode to publish mode before you push to the Github repo
+# run this app in debug mode  on your local. Do not forget to change debug mode to publish mode before you push to the Github repo
 if __name__=="__main__":
     # app.run(debug=True)
     app.run(host='0.0.0.0', port=80)
