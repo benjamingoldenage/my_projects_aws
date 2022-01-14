@@ -27,12 +27,12 @@ def calculate():
     if request.method == "POST":
         num1 = request.form["number1"]
         num2 = request.form["number2"]
-        return render_template("result.html", var1 = num1, var2 = num2, result = lcm(int(num1),int(num2)), developer_name = "Serdar")
+        return render_template("result.html", var1 = num1, var2 = num2, result = lcm(int(num1),int(num2)), developer_name = "Benjamin")
     else:
-        return render_template("result.html", developer_name="Serdar")
+        return render_template("result.html", developer_name="Benjamin")
 
 
 # Add a statement to run the Flask application which can be debugged.
 if __name__ =="__main__":
-    # app.run(debug=True)
-    app.run(host='0.0.0.0', port=80)
+    app.run(debug=True)
+    # app.run(host='0.0.0.0', port=80)
