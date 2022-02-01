@@ -4,3 +4,4 @@ def lcm(num1,num2):
         if i%num1==0 and i%num2==0:
             common_multiplication.append(i)
     return min(common_multiplication)
+# g
